@@ -30,5 +30,13 @@ public class Range implements Comparable<Range> {
 	public int compareTo(Range o) {
 		return Integer.compare(this.start, o.start);
 	}
+	
+	public static boolean isValid(Range range) {
+		if(range!=null) {
+			return (String.valueOf(range.getStart()).length() == 5)
+					&& (String.valueOf(range.getEnd()).length() == 5);
+ 		}
+		return false;
+	}
 
 }
